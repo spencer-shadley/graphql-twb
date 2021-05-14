@@ -1,7 +1,7 @@
 const express = require('express');
 const expressGraphQL = require('express-graphql').graphqlHTTP;
-const twb = require('./twb');
-const TwbType = require('./schema.js');
+const twb = require('./simple-twb');
+const TwbType = require('./simple-schema');
 
 const {
     GraphQLSchema,
@@ -9,9 +9,6 @@ const {
 } = require('graphql');
 
 const app = express();
-
-
-  
 
 const RootQueryType = new GraphQLObjectType({
     name: 'Query',
